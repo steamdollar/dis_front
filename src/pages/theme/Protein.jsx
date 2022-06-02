@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { theme_protein_request } from "../../reducers/theme.js";
 import { Background, Container, StationName, CloseBtn, StoreBox, StoreName, StoreAddress, StoreScore } from '../Index';
+import { backend } from '../../utils/ip.js';
 
 const Protein = () => {
     const { result } = useSelector(state => state.theme);
@@ -24,15 +25,15 @@ const Protein = () => {
                                 <img 
                                     src={
                                         v.img1 !== null ?
-                                        `http://52.78.175.114:4000/uploads/${v.img1}`
+                                        `${backend}/uploads/${v.img1}`
                                         :
                                         v.img2 !== null ?
-                                        `http://52.78.175.114:4000/uploads/${v.img2}`
+                                        `${backend}/uploads/${v.img2}`
                                         :
                                         v.img3 !== null ?
-                                        `http://52.78.175.114:4000/uploads/${v.img3}`
+                                        `${backend}/uploads/${v.img3}`
                                         : 
-                                        `http://52.78.175.114:4000/uploads/defaultImage.jpg`
+                                        `${backend}/uploads/defaultImage.jpg`
                                     }
                                     style={{ borderRadius: '30px' }}
                                     width={240}

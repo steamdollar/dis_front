@@ -6,6 +6,7 @@ import { isMobile } from "react-device-detect";
 import { review_request, review_delete_request,
     review_update_start, review_update_proceed, review_update_request } from "../reducers/review.js";
 
+
 const Background = styled.div`
     display: flex;
     position: fixed;
@@ -533,7 +534,7 @@ const Mypage = () => {
                     <NoLogin>
                         <div className="please_kakao">카카오 로그인을 해주세요.</div>
                         <div className="goback_box">
-                            <a href="http://52.78.175.114:4000/user/klogin" className="go_kakao"> 로그인 하러가기</a>
+                            <Link to={backend + '/user/klogin'} className="go_kakao"> 로그인 하러가기</Link>
                             <div className="back_btn" onClick={()=>{history(-1)}}> 뒤로 가기 </div>
                         </div>
                     </NoLogin>

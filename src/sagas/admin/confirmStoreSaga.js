@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_confirm_store_request, admin_confirm_store_success, admin_confirm_store_failure} from '../../reducers/admin/confirmStore';
+import { backend } from '../../utils/ip.js'
 
 async function confirmStoreAPI({payload}){
     let qwert = []
@@ -14,7 +15,7 @@ async function confirmStoreAPI({payload}){
     }
     const idx = qwert[0]
     try{
-        const result = await axios.post(`http://52.78.175.114:4000/dt/admin/menu/store/confirm/addstore/`+ idx,payload, config)
+        const result = await axios.post(`${backend}/dt/admin/menu/store/confirm/addstore/`+ idx,payload, config)
 
         return result
     }catch(e){

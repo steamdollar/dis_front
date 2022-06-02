@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { review_failure, review_request, review_success } from '../reducers/review.js';
+import { backend } from '../utils/ip.js'
 
 const option = {
     'Content-type':'application/json',
@@ -12,7 +13,7 @@ async function reviewAPI (action) {
         email: action.payload.email
     }
     try {
-        const result = await axios.post('http://52.78.175.114:4000/user/getReview', data , option )
+        const result = await axios.post('${backend}/user/getReview', data , option )
         return result.data
     }
     catch(e) {

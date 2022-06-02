@@ -1,10 +1,11 @@
 import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_del_regi_request, admin_del_regi_success, admin_del_regi_failure} from '../../reducers/admin/adminStConDel.js';
+import { backend } from '../../utils/ip.js'
 
 async function delRegisterAPI({payload}){
     try{
-        const result = await axios.post(`http://52.78.175.114:4000/dt/admin/menu/store/setting/delregi/`+payload,payload)
+        const result = await axios.post(`${backend}/dt/admin/menu/store/setting/delregi/`+payload,payload)
         return result
     }catch(e){
         console.log(e)
