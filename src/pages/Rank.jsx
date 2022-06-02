@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { rank_total_request, rank_flavor_request, rank_atmosphere_request, rank_cheap_request, rank_service_request } from "../reducers/rank";
 import { isMobile } from "react-device-detect";
+import { backend } from "../utils/ip";
 
 const Background = styled.div`
     display: flex;
