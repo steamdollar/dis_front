@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Store>
-    <BrowserRouter basename='http://donut999.shop'>
+    <BrowserRouter base href='http://donut999.shop'>
     <App/>
     </BrowserRouter>
   </Store>
