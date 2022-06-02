@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Store>
-    <BrowserRouter basename='http://13.209.177.153:3000'>
+    <BrowserRouter basename='http://13.209.177.153'>
     <App/>
     </BrowserRouter>
   </Store>
