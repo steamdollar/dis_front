@@ -4,7 +4,7 @@ import { admin_black_request, admin_black_success, admin_black_failure} from '..
 
 async function blackAPI({payload}){
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/user/setting`,null)
+        const result = await axios.post(`http://52.78.175.114:4000/dt/admin/menu/user/setting`,null)
         return result
     }catch(e){
         console.log(e)

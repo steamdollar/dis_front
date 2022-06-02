@@ -12,7 +12,7 @@ async function reviewAPI (action) {
         email: action.payload.email
     }
     try {
-        const result = await axios.post('http://localhost:4000/user/getReview', data , option )
+        const result = await axios.post('http://52.78.175.114:4000/user/getReview', data , option )
         return result.data
     }
     catch(e) {

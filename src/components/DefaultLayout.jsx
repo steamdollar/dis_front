@@ -83,22 +83,22 @@ const DefaultHeader = () => {
         localStorage.setItem('persist:user', `{\"me\":{\"email\":\"null\",\"nickname\":\"null\",\"isLogin\":false},\"error\":null,\"loading\":false}`);
         dispatch({type: user_logout_success.toString()});
         alert('로그아웃 되었습니다')
-        window.location.href = 'http://localhost:3000';
+        window.location.href = 'http://13.209.177.153:3000';
     };
 
     const menuMouseOver = (e)=>{
-        e.target.src = "http://localhost:3000/img/donut_set_hover.png";
+        e.target.src = "http://13.209.177.153:3000/img/donut_set_hover.png";
     };
 
     const menuMouseOut = (e)=>{
-        e.target.src = "http://localhost:3000/img/donut_set.png";
+        e.target.src = "http://13.209.177.153:3000/img/donut_set.png";
     };
 
     const items = [
         { label: <Link to="/mypage"> 슿 마이 페이지</Link>, key: 'item-1' },
         { 
             label: stores.user.me.email === null 
-            ? <a href="http://localhost:4000/user/klogin"> 쳌 로그인</a> 
+            ? <a href="http://52.78.175.114:4000/user/klogin"> 쳌 로그인</a> 
             : <span onClick={logoutHandler} > 쳌 로그아웃</span>,
             key: 'item-2' 
         },
@@ -119,8 +119,8 @@ const DefaultHeader = () => {
     return (
         <>
             <Header>
-                <Link to="/"><img width={180} height={130} src="http://localhost:3000/img/logo1.png"></img></Link>
-                <Img onClick={onShow} src="http://localhost:3000/img/donut_set.png" width={100} height={80} alt=''
+                <Link to="/"><img width={180} height={130} src="http://13.209.177.153:3000/img/logo1.png"></img></Link>
+                <Img onClick={onShow} src="http://13.209.177.153:3000/img/donut_set.png" width={100} height={80} alt=''
                 onMouseOver={menuMouseOver} onMouseOut={menuMouseOut}/>
             </Header>
             {

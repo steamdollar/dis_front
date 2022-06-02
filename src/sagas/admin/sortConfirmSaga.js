@@ -4,7 +4,7 @@ import { admin_confirm_state_request, admin_confirm_state_success, admin_confirm
 
 async function sortConfirmAPI(action){
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/store/confirm/sort`,action)
+        const result = await axios.post(`http://52.78.175.114:4000/dt/admin/menu/store/confirm/sort`,action)
         return result
     }catch(e){
         console.log(e)

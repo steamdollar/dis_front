@@ -4,7 +4,7 @@ import { admin_del_review_request, admin_del_review_success, admin_del_review_fa
 
 async function deleteReviewAPI({payload}){
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/review/setting/deletereview/`+payload,payload)
+        const result = await axios.post(`http://52.78.175.114:4000/dt/admin/menu/review/setting/deletereview/`+payload,payload)
         return result
     }catch(e){
         console.log(e)

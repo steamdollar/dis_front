@@ -6,22 +6,22 @@ import { theme_protein_request, theme_protein_success, theme_protein_failure,
     theme_parking_request, theme_parking_success, theme_parking_failure } from ".././reducers/theme.js";
 
 async function proteinAPI() {
-    const result = await axios.post('http://localhost:4000/theme/protein', null);
+    const result = await axios.post('http://52.78.175.114:4000/theme/protein', null);
     return result;
 }
 
 async function photoAPI() {
-    const result = await axios.post('http://localhost:4000/theme/photo', null);
+    const result = await axios.post('http://52.78.175.114:4000/theme/photo', null);
     return result;
 }
 
 async function uniqueAPI() {
-    const result = await axios.post('http://localhost:4000/theme/unique', null);
+    const result = await axios.post('http://52.78.175.114:4000/theme/unique', null);
     return result;
 }
 
 async function parkingAPI() {
-    const result = await axios.post('http://localhost:4000/theme/parking', null);
+    const result = await axios.post('http://52.78.175.114:4000/theme/parking', null);
     return result;
 }
 

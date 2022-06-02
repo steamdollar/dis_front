@@ -5,7 +5,7 @@ import { admin_confirm_del_request, admin_confirm_del_success, admin_confirm_del
 async function confirmDelAPI({payload}){
     const idx = payload.payload
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/store/confirm/delregi/`+idx,payload)
+        const result = await axios.post(`http://52.78.175.114:4000/dt/admin/menu/store/confirm/delregi/`+idx,payload)
         return result
     }catch(e){
         console.log(e)

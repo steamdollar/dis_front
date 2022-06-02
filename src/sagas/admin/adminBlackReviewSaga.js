@@ -4,7 +4,7 @@ import { admin_black_review_request, admin_black_review_success, admin_black_rev
 
 async function adminBlackReviewAPI(payload){
     try{
-        const result = await axios.post('http://localhost:4000/dt/admin/menu/user/setting/checkblack/'+payload,null)
+        const result = await axios.post('http://52.78.175.114:4000/dt/admin/menu/user/setting/checkblack/'+payload,null)
         return result
     }catch(e){
         console.log(e)

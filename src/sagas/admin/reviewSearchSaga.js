@@ -6,7 +6,7 @@ import { admin_search_request, admin_search_success, admin_search_failure} from 
 async function searchAPI(action){
 
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/search/review`,action)
+        const result = await axios.post(`http://52.78.175.114:4000/dt/admin/menu/search/review`,action)
         return result
     }catch(e){
         console.log(e)

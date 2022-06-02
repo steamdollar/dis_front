@@ -238,15 +238,15 @@ const Shop = () => {
                             src = 
                                 {
                                     img3 !== null ?
-                                    `http://localhost:4000/uploads/${img3}`
+                                    `http://52.78.175.114:4000/uploads/${img3}`
                                     :
                                     img2 !== null ?
-                                    `http://localhost:4000/uploads/${img2}`
+                                    `http://52.78.175.114:4000/uploads/${img2}`
                                     :
                                     img1 !== null ?
-                                    `http://localhost:4000/uploads/${img1}`
+                                    `http://52.78.175.114:4000/uploads/${img1}`
                                     :
-                                    `http://localhost:4000/uploads/defaultImage.jpg`
+                                    `http://52.78.175.114:4000/uploads/defaultImage.jpg`
                                 }
                             />
                         </ImgBox>
@@ -255,25 +255,25 @@ const Shop = () => {
                             <Img 
                             src = {
                                     img1 !== 'N/A' ?
-                                    `http://localhost:4000/uploads/${img1}`
+                                    `http://52.78.175.114:4000/uploads/${img1}`
                                     : 
-                                    `http://localhost:4000/uploads/defaultImage.jpg`
+                                    `http://52.78.175.114:4000/uploads/defaultImage.jpg`
                                 }
                             />
                             <Img 
                             src = {
                                     img2 !== 'N/A' ?
-                                    `http://localhost:4000/uploads/${img2}`
+                                    `http://52.78.175.114:4000/uploads/${img2}`
                                     : 
-                                    `http://localhost:4000/uploads/defaultImage.jpg`
+                                    `http://52.78.175.114:4000/uploads/defaultImage.jpg`
                                 }
                             />
                             <Img 
                             src = {
                                     img3 !== 'N/A' ?
-                                    `http://localhost:4000/uploads/${img3}`
+                                    `http://52.78.175.114:4000/uploads/${img3}`
                                     : 
-                                    `http://localhost:4000/uploads/defaultImage.jpg`
+                                    `http://52.78.175.114:4000/uploads/defaultImage.jpg`
                                 }
                             />
                         </ImgBox>

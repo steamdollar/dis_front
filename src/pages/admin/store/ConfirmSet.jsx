@@ -196,10 +196,10 @@ const ConfirmSet = (defaultValue) => {
 
         const data = { storename : regi.name, email: email }
         
-        const result = await axios.post(`http://localhost:4000/register/request`, data)
+        const result = await axios.post(`http://52.78.175.114:4000/register/request`, data)
 
         alert('등록 승인 되었습니다.')
-        window.location.href='http://localhost:3000/dt/admin/menu'
+        window.location.href='http://13.209.177.153:3000/dt/admin/menu'
     }
 
 

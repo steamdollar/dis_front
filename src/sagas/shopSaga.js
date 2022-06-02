@@ -3,7 +3,7 @@ import { takeLatest, call, put } from "redux-saga/effects";
 import { shop_request, shop_success, shop_failure } from '../reducers/shop.js';
 
 async function shopAPI(action) {
-    const result = await axios.post('http://localhost:4000/shop/:idx', action);
+    const result = await axios.post('http://52.78.175.114:4000/shop/:idx', action);
     return result;
 }
 

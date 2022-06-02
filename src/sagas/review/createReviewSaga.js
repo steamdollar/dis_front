@@ -14,7 +14,7 @@ async function createReviewAPI (action) {
         ...action.payload
     }
     try {
-        const result = await axios.post('http://localhost:4000/review/createReview', data , option )
+        const result = await axios.post('http://52.78.175.114:4000/review/createReview', data , option )
         return result.data
     }
     catch(e) {

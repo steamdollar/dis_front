@@ -4,7 +4,7 @@ import { admin_store_request, admin_store_success, admin_store_failure} from '..
 
 async function adminAPI(){
     try{
-        const result = await axios.post('http://localhost:4000/dt/admin/menu/store/setting',null)
+        const result = await axios.post('http://52.78.175.114:4000/dt/admin/menu/store/setting',null)
         return result
     }catch(e){
         console.log(e)

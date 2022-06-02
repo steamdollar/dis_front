@@ -5,7 +5,7 @@ import { admin_edit_store_request, admin_edit_store_success, admin_edit_store_fa
 async function editStoreAPI({payload}){
     const idx = payload.store_id
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/store/setting/update/`+idx,payload)
+        const result = await axios.post(`http://52.78.175.114:4000/dt/admin/menu/store/setting/update/`+idx,payload)
         return result
     }catch(e){
         console.log(e)

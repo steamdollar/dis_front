@@ -329,7 +329,7 @@ const Write = () => {
                             sidx: parseInt(stores.createReview.sidx)}
         dispatch({type: review_create_request.toString(), payload: {...payload } })
         alert('리뷰가 작성되었습니다!')
-        window.location= 'http://localhost:3000'
+        window.location= 'http://13.209.177.153:3000'
     }
 
     useEffect(() => {  

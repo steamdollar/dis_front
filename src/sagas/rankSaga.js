@@ -7,27 +7,27 @@ import { rank_total_request, rank_total_success, rank_total_failure,
     rank_service_request, rank_service_success, rank_service_failure } from "../reducers/rank";
 
 async function totalAPI(action) {
-    const result = await axios.post('http://localhost:4000/rank/total', action);
+    const result = await axios.post('http://52.78.175.114:4000/rank/total', action);
     return result;
 }
 
 async function flavorAPI(action) {
-    const result = await axios.post('http://localhost:4000/rank/flavor', action);
+    const result = await axios.post('http://52.78.175.114:4000/rank/flavor', action);
     return result;
 }
 
 async function atmosphereAPI(action) {
-    const result = await axios.post('http://localhost:4000/rank/atmosphere', action);
+    const result = await axios.post('http://52.78.175.114:4000/rank/atmosphere', action);
     return result;
 }
 
 async function cheapAPI(action) {
-    const result = await axios.post('http://localhost:4000/rank/cheap', action);
+    const result = await axios.post('http://52.78.175.114:4000/rank/cheap', action);
     return result;
 }
 
 async function serviceAPI(action) {
-    const result = await axios.post('http://localhost:4000/rank/service', action);
+    const result = await axios.post('http://52.78.175.114:4000/rank/service', action);
     return result;
 }
 

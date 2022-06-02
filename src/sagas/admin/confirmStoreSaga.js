@@ -14,7 +14,7 @@ async function confirmStoreAPI({payload}){
     }
     const idx = qwert[0]
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/store/confirm/addstore/`+ idx,payload, config)
+        const result = await axios.post(`http://52.78.175.114:4000/dt/admin/menu/store/confirm/addstore/`+ idx,payload, config)
 
         return result
     }catch(e){

@@ -3,7 +3,7 @@ import { takeLatest, call, put } from "redux-saga/effects";
 import { register_request, register_success, register_failure } from "../reducers/register";
 
 async function registerAPI(action) {
-    const result = await axios.post('http://localhost:4000/register/join', action);
+    const result = await axios.post('http://52.78.175.114:4000/register/join', action);
     return result;
 }
 

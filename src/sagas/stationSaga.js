@@ -3,7 +3,7 @@ import { takeLatest, call, put } from "redux-saga/effects";
 import { station_request, station_success, station_no, station_failure } from "../reducers/station";
 
 async function stationAPI(action) {
-    const result = await axios.post('http://localhost:4000/station/info', action);
+    const result = await axios.post('http://52.78.175.114:4000/station/info', action);
     return result;
 }
 

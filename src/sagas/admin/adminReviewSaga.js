@@ -4,7 +4,7 @@ import { admin_review_request, admin_review_success, admin_review_failure} from 
 
 async function adminReviewAPI(){
     try{
-        const result = await axios.post('http://localhost:4000/dt/admin/menu/review/setting',null)
+        const result = await axios.post('http://52.78.175.114:4000/dt/admin/menu/review/setting',null)
         return result
     }catch(e){
         console.log(e)

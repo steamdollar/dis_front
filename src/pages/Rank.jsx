@@ -366,15 +366,15 @@ const Rank = () => {
                                             <img 
                                                 src={
                                                         v.img3 !== null ?
-                                                        `http://localhost:4000/uploads/${v.img3}`
+                                                        `http://52.78.175.114:4000/uploads/${v.img3}`
                                                         :
                                                         v.img2 !== null ?
-                                                        `http://localhost:4000/uploads/${v.img2}`
+                                                        `http://52.78.175.114:4000/uploads/${v.img2}`
                                                         :
                                                         v.img1 !== null ?
-                                                        `http://localhost:4000/uploads/${v.img1}`
+                                                        `http://52.78.175.114:4000/uploads/${v.img1}`
                                                         : 
-                                                        `http://localhost:4000/uploads/defaultImage.jpg`
+                                                        `http://52.78.175.114:4000/uploads/defaultImage.jpg`
                                                 }
                                                 style={{ borderRadius: '6px' }}
                                                 width={"100%"}
@@ -384,15 +384,15 @@ const Rank = () => {
                                             <img 
                                                 src={
                                                     v.img3 !== null ?
-                                                    `http://localhost:4000/uploads/${v.img3}`
+                                                    `http://52.78.175.114:4000/uploads/${v.img3}`
                                                     :
                                                     v.img2 !== null ?
-                                                    `http://localhost:4000/uploads/${v.img2}`
+                                                    `http://52.78.175.114:4000/uploads/${v.img2}`
                                                     :
                                                     v.img1 !== null ?
-                                                    `http://localhost:4000/uploads/${v.img1}`
+                                                    `http://52.78.175.114:4000/uploads/${v.img1}`
                                                     : 
-                                                    `http://localhost:4000/uploads/defaultImage.jpg`
+                                                    `http://52.78.175.114:4000/uploads/defaultImage.jpg`
                                                 }
                                                 style={{ borderRadius: '6px' }} position={"absolute"}
                                                 width={"100%"}
