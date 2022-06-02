@@ -1,9 +1,11 @@
 import axios from "axios";
 import { takeLatest, call, put } from "redux-saga/effects";
 import { register_request, register_success, register_failure } from "../reducers/register";
+import { backend } from '../utils/ip.js'
+
 
 async function registerAPI(action) {
-    const result = await axios.post('http://localhost:4000/register/join', action);
+    const result = await axios.post(`${backend}/register/join`, action);
     return result;
 }
 

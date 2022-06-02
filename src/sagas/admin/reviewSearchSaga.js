@@ -1,12 +1,13 @@
 import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_search_request, admin_search_success, admin_search_failure} from '../../reducers/admin/adminReview';
+import { backend } from '../../utils/ip.js'
 
 
 async function searchAPI(action){
 
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/search/review`,action)
+        const result = await axios.post(`${backend}/dt/admin/menu/search/review`,action)
         return result
     }catch(e){
         console.log(e)

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import {Li} from '../../components/styles/AdminStyles'
 import { Back } from '../../components/styles/AdminStyles';
 import { useSelector} from 'react-redux';
+import { frontend } from '../../utils/ip';
+import { backend } from '../../utils/ip';
 
 const AdminMenu = ()=>{
     const stores = useSelector(state => state)
@@ -12,7 +14,7 @@ const AdminMenu = ()=>{
         localStorage.setItem('persist:user',{"adminLogin":"{\"admin\":null,\"isLogin\":false}","user":"{\"me\":{\"isLogin\":true,\"nickname\":\"null\",\"email\":\"null\"},\"error\":null,\"loading\":false}",
             "_persist":"{\"version\":-1,\"rehydrated\":true}"})
         alert('로그아웃 되었습니다')
-        window.location.href='http://localhost:3000'
+        window.location.href=`${frontend}`
     }
 
     return (

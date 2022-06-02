@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 import { Submit, BackBtn} from '../../../components/styles/AdminStyles';
 import styled from 'styled-components';
 import axios from 'axios';
-
+import { frontend } from '../../../utils/ip.js';
+import { backend } from '../../../utils/ip.js';
 
 const Background = styled.div`
     display: flex;
@@ -196,10 +197,10 @@ const ConfirmSet = (defaultValue) => {
 
         const data = { storename : regi.name, email: email }
         
-        const result = await axios.post(`http://localhost:4000/register/request`, data)
+        const result = await axios.post(`${backend}/register/request`, data)
 
         alert('등록 승인 되었습니다.')
-        window.location.href='http://localhost:3000/dt/admin/menu'
+        window.location.href=`${frontend}/dt/admin/menu`
     }
 
 

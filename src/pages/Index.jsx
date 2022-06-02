@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { station_exit, station_request } from '../reducers/station';
 import { Link } from 'react-router-dom';
+import { backend } from '../utils/ip';
 
 export const Background = styled.div`
     display: flex;
@@ -821,15 +822,15 @@ const Index = () => {
                                                 <Img
                                                 src = {
                                                     v.img1 !== null ?
-                                                    `http://localhost:4000/uploads/${v.img1}`
+                                                    `${backend}/uploads/${v.img1}`
                                                     :
                                                     v.img2 !== null ?
-                                                    `http://localhost:4000/uploads/${v.img2}`
+                                                    `${backend}/uploads/${v.img2}`
                                                     :
                                                     v.img3 !== null ?
-                                                    `http://localhost:4000/uploads/${v.img3}`
+                                                    `${backend}/uploads/${v.img3}`
                                                     : 
-                                                    `http://localhost:4000/uploads/defaultImage.jpg`
+                                                    `${backend}/uploads/defaultImage.jpg`
                                                 }
 
                                                 />

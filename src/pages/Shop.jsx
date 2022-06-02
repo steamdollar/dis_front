@@ -6,6 +6,7 @@ import { shop_request } from '../reducers/shop.js';
 import { isMobile } from "react-device-detect";
 import { useNavigate } from "react-router-dom";
 import {ReviewOne} from './Mypage'
+import { backend } from "../utils/ip.js";
 
 
 
@@ -238,15 +239,15 @@ const Shop = () => {
                             src = 
                                 {
                                     img3 !== null ?
-                                    `http://localhost:4000/uploads/${img3}`
+                                    `${backend}/uploads/${img3}`
                                     :
                                     img2 !== null ?
-                                    `http://localhost:4000/uploads/${img2}`
+                                    `${backend}/uploads/${img2}`
                                     :
                                     img1 !== null ?
-                                    `http://localhost:4000/uploads/${img1}`
+                                    `${backend}/uploads/${img1}`
                                     :
-                                    `http://localhost:4000/uploads/defaultImage.jpg`
+                                    `${backend}/uploads/defaultImage.jpg`
                                 }
                             />
                         </ImgBox>
@@ -255,25 +256,25 @@ const Shop = () => {
                             <Img 
                             src = {
                                     img1 !== 'N/A' ?
-                                    `http://localhost:4000/uploads/${img1}`
+                                    `${backend}/uploads/${img1}`
                                     : 
-                                    `http://localhost:4000/uploads/defaultImage.jpg`
+                                    `${backend}/uploads/defaultImage.jpg`
                                 }
                             />
                             <Img 
                             src = {
                                     img2 !== 'N/A' ?
-                                    `http://localhost:4000/uploads/${img2}`
+                                    `${backend}/uploads/${img2}`
                                     : 
-                                    `http://localhost:4000/uploads/defaultImage.jpg`
+                                    `${backend}/uploads/defaultImage.jpg`
                                 }
                             />
                             <Img 
                             src = {
                                     img3 !== 'N/A' ?
-                                    `http://localhost:4000/uploads/${img3}`
+                                    `${backend}/uploads/${img3}`
                                     : 
-                                    `http://localhost:4000/uploads/defaultImage.jpg`
+                                    `${backend}/uploads/defaultImage.jpg`
                                 }
                             />
                         </ImgBox>

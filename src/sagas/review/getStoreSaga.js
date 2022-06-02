@@ -2,6 +2,7 @@ import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { getStore_failure, getStore_request, getStore_success } 
 from '../../reducers/writeReview.js';
+import { backend } from '../../utils/ip.js';
 
 const option = {
     'Content-type':'application/json',
@@ -13,7 +14,7 @@ async function createReviewAPI (action) {
         ...action.payload
     }
     try {
-        const result = await axios.post('http://localhost:4000/review/getStore', sidx , option )
+        const result = await axios.post(`${backend}/review/getStore`, sidx , option )
         const response = {
             ...sidx,
             result

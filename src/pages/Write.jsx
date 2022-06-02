@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import {getStore_request, review_create_request, review_write
 , review_flavor, review_atmosphere, review_cheap, review_service} from '../reducers/writeReview.js'
 import { useNavigate } from 'react-router-dom';
+import { frontend } from "../utils/ip.js";
 
 
 const Background = styled.div`
@@ -329,7 +330,7 @@ const Write = () => {
                             sidx: parseInt(stores.createReview.sidx)}
         dispatch({type: review_create_request.toString(), payload: {...payload } })
         alert('리뷰가 작성되었습니다!')
-        window.location= 'http://localhost:3000'
+        window.location= `${frontend}`
     }
 
     useEffect(() => {  

@@ -1,9 +1,10 @@
 import axios from "axios";
 import { takeLatest, call, put } from "redux-saga/effects";
 import { shop_request, shop_success, shop_failure } from '../reducers/shop.js';
+import { backend } from '../utils/ip.js'
 
 async function shopAPI(action) {
-    const result = await axios.post('http://localhost:4000/shop/:idx', action);
+    const result = await axios.post(`${backend}/shop/:idx`, action);
     return result;
 }
 

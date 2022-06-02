@@ -1,10 +1,11 @@
 import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_confirm_state_request, admin_confirm_state_success, admin_confirm_state_failure} from '../../reducers/admin/adminStoreConfirm';
+import { backend } from '../../utils/ip.js'
 
 async function sortConfirmAPI(action){
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/store/confirm/sort`,action)
+        const result = await axios.post(`${backend}/dt/admin/menu/store/confirm/sort`,action)
         return result
     }catch(e){
         console.log(e)

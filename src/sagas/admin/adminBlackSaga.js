@@ -1,10 +1,11 @@
 import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_black_request, admin_black_success, admin_black_failure} from '../../reducers/admin/adminBlack.js';
+import { backend } from '../../utils/ip.js'
 
 async function blackAPI({payload}){
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/user/setting`,null)
+        const result = await axios.post(`${backend}/dt/admin/menu/user/setting`,null)
         return result
     }catch(e){
         console.log(e)

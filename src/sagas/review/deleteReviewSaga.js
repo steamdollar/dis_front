@@ -2,6 +2,7 @@ import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { review_delete_failure, review_delete_request, review_delete_success } 
 from '../../reducers/review.js';
+import { backend } from '../../utils/ip.js';
 
 const option = {
     'Content-type':'application/json',
@@ -13,7 +14,7 @@ async function deleteReviewAPI (action) {
         ...action.payload
     }
     try {
-        const result = await axios.post('http://localhost:4000/review/deleteReview', data , option )
+        const result = await axios.post(`${backend}/review/deleteReview`, data , option )
         const response = {
             result: result.data,
             idx: action.payload.idx

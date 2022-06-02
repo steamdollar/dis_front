@@ -2,6 +2,7 @@ import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { review_update_failure, review_update_request, review_update_success } 
 from '../../reducers/review.js';
+import { backend } from '../../utils/ip.js';
 
 const option = {
     'Content-type':'application/json',
@@ -13,7 +14,7 @@ async function updateReviewAPI (action) {
         ...action.payload
     }
     try {
-        const result = await axios.post('http://localhost:4000/review/updateReview', data , option )
+        const result = await axios.post(`${backend}/review/updateReview`, data , option )
         return result.data
     }
     catch(e) {

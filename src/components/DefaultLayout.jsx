@@ -9,6 +9,8 @@ import Sider from 'antd/lib/layout/Sider';
 import SFLemon from '../font/fonts';
 import '../App.css';
 import { user_logout_success } from '../reducers/user.js'
+import { backend } from '../utils/ip.js';
+import { frontend } from '../utils/ip.js';
 
 const Header = styled.header`
     display: flex;
@@ -83,22 +85,22 @@ const DefaultHeader = () => {
         localStorage.setItem('persist:user', `{\"me\":{\"email\":\"null\",\"nickname\":\"null\",\"isLogin\":false},\"error\":null,\"loading\":false}`);
         dispatch({type: user_logout_success.toString()});
         alert('로그아웃 되었습니다')
-        window.location.href = 'http://localhost:3000';
+        window.location.href = '/';
     };
 
     const menuMouseOver = (e)=>{
-        e.target.src = "http://localhost:3000/img/donut_set_hover.png";
+        e.target.src = "./img/donut_set_hover.png";
     };
 
     const menuMouseOut = (e)=>{
-        e.target.src = "http://localhost:3000/img/donut_set.png";
+        e.target.src = "./img/donut_set.png";
     };
 
     const items = [
         { label: <Link to="/mypage"> 슿 마이 페이지</Link>, key: 'item-1' },
         { 
             label: stores.user.me.email === null 
-            ? <a href="http://localhost:4000/user/klogin"> 쳌 로그인</a> 
+            ? <Link to={backend +'/user/klogin'}> 쳌 로그인</Link> 
             : <span onClick={logoutHandler} > 쳌 로그아웃</span>,
             key: 'item-2' 
         },
@@ -119,8 +121,8 @@ const DefaultHeader = () => {
     return (
         <>
             <Header>
-                <Link to="/"><img width={180} height={130} src="http://localhost:3000/img/logo1.png"></img></Link>
-                <Img onClick={onShow} src="http://localhost:3000/img/donut_set.png" width={100} height={80} alt=''
+                <Link to="/"><img width={180} height={130} src="./img/logo1.png"></img></Link>
+                <Img onClick={onShow} src='./img/donut_set.png' width={100} height={80} alt=''
                 onMouseOver={menuMouseOver} onMouseOut={menuMouseOut}/>
             </Header>
             {

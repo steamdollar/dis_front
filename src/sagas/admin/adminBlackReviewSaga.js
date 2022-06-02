@@ -1,10 +1,11 @@
 import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_black_review_request, admin_black_review_success, admin_black_review_failure} from '../../reducers/admin/adminBlackReview.js';
+import { backend } from '../../utils/ip.js'
 
 async function adminBlackReviewAPI(payload){
     try{
-        const result = await axios.post('http://localhost:4000/dt/admin/menu/user/setting/checkblack/'+payload,null)
+        const result = await axios.post(`${backend}/dt/admin/menu/user/setting/checkblack/`+payload,null)
         return result
     }catch(e){
         console.log(e)

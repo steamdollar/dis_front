@@ -1,11 +1,12 @@
 import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_store_edit_request, admin_store_edit_success, admin_store_edit_failure} from '../../reducers/admin/adminStoreSet.js';
+import { backend } from '../../utils/ip.js'
 
 
 async function adminStoreAPI({payload}){
     try{
-        const result = await axios.post(`http://localhost:4000/dt/admin/menu/store/setting/`+payload,payload)
+        const result = await axios.post(`${backend}/dt/admin/menu/store/setting/`+payload,payload)
         return result
     }catch(e){
         console.log(e)
