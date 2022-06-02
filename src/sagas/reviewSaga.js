@@ -13,7 +13,7 @@ async function reviewAPI (action) {
         email: action.payload.email
     }
     try {
-        const result = await axios.post('${backend}/user/getReview', data , option )
+        const result = await axios.post(`${backend}/user/getReview`, data , option )
         return result.data
     }
     catch(e) {
