@@ -4,14 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Store from './store/useStore';
-import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Store>
-    <BrowserRouter basename='http://donut999.shop'>
+  <Store basename='http://donut999.shop'>
     <App/>
-    </BrowserRouter>
   </Store>
 );
 
