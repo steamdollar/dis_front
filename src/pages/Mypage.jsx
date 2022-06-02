@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { isMobile } from "react-device-detect";
 import { review_request, review_delete_request,
     review_update_start, review_update_proceed, review_update_request } from "../reducers/review.js";
+import { backend } from "../utils/ip.js";
 
 
 const Background = styled.div`
