@@ -14,7 +14,7 @@ const Login = () => {
 
     return (
         <>
-            <Link to={backend +'/user/klogin'}> kakao login </Link>
+            <a href={backend + '/user/klogin'}> kakao login </a>
             <br/>
             <button onClick={logoutHandler}> logout </button>
         </>
