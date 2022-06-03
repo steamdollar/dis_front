@@ -85,7 +85,7 @@ const Confirm = () => {
                                                 <Td>{x.sns}</Td>
                                                 <Td>{x.stamp}</Td>
                                                 <Td>
-                                                    {x.state === '대기' ? '대기' : x.state}
+                                                    {x.state === 'false' ? '대기' : x.state}
                                                 </Td>
                                                 <Td>
                                                     <input type="checkbox" name = {"registerDel"+x.idx}  value={x.idx} onChange={checkHandler}/>

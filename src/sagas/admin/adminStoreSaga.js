@@ -2,6 +2,7 @@ import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_store_edit_request, admin_store_edit_success, admin_store_edit_failure} from '../../reducers/admin/adminStoreSet.js';
 import { backend } from '../../utils/ip.js'
+import option from '../option.js'
 
 
 async function adminStoreAPI({payload}){

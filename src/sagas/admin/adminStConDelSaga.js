@@ -2,6 +2,7 @@ import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_del_regi_request, admin_del_regi_success, admin_del_regi_failure} from '../../reducers/admin/adminStConDel.js';
 import { backend } from '../../utils/ip.js'
+import option from '../option.js'
 
 async function delRegisterAPI({payload}){
     try{
