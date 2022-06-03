@@ -366,13 +366,13 @@ const Rank = () => {
                                         {isMobile ?
                                             <img 
                                                 src={
-                                                        v.img3 !== null ?
+                                                        v.img3 !== 'N/A' ?
                                                         `${backend}/uploads/${v.img3}`
                                                         :
-                                                        v.img2 !== null ?
+                                                        v.img2 !== 'N/A' ?
                                                         `${backend}/uploads/${v.img2}`
                                                         :
-                                                        v.img1 !== null ?
+                                                        v.img1 !== 'N/A' ?
                                                         `${backend}/uploads/${v.img1}`
                                                         : 
                                                         `${backend}/uploads/defaultImage.jpg`
@@ -384,13 +384,13 @@ const Rank = () => {
                                             /> : 
                                             <img 
                                                 src={
-                                                    v.img3 !== null ?
+                                                    v.img3 !== 'N/A' ?
                                                     `${backend}/uploads/${v.img3}`
                                                     :
-                                                    v.img2 !== null ?
+                                                    v.img2 !== "N/A" ?
                                                     `${backend}/uploads/${v.img2}`
                                                     :
-                                                    v.img1 !== null ?
+                                                    v.img1 !== "N/A" ?
                                                     `${backend}/uploads/${v.img1}`
                                                     : 
                                                     `${backend}/uploads/defaultImage.jpg`
