@@ -33,7 +33,7 @@ const forkComponent = () => {
     return(
         <>
             {isMobile==false &&
-            <Fork src='./img/fork.png' className="fork"/>
+            <Fork src='http://donut999.shop/img/fork.png' className="fork"/>
             }
         </>
         
