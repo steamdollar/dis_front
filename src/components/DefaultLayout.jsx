@@ -100,7 +100,7 @@ const DefaultHeader = () => {
         { label: <Link to="/mypage"> 슿 마이 페이지</Link>, key: 'item-1' },
         { 
             label: stores.user.me.email === null 
-            ? <Link to={backend +'/user/klogin'}> 쳌 로그인</Link> 
+            ? <a href={backend +'/user/klogin'}> 쳌 로그인</a> 
             : <span onClick={logoutHandler} > 쳌 로그아웃</span>,
             key: 'item-2' 
         },

@@ -535,7 +535,7 @@ const Mypage = () => {
                     <NoLogin>
                         <div className="please_kakao">카카오 로그인을 해주세요.</div>
                         <div className="goback_box">
-                            <Link to={backend + '/user/klogin'} className="go_kakao"> 로그인 하러가기</Link>
+                            <a href={backend + '/user/klogin'} className="go_kakao"> 로그인 하러가기</a>
                             <div className="back_btn" onClick={()=>{history(-1)}}> 뒤로 가기 </div>
                         </div>
                     </NoLogin>
