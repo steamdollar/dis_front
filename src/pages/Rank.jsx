@@ -222,14 +222,12 @@ const SmallDiv = styled.div`
             border-top: 0.5px solid #dcdcdc;
             border-left:none;
             font-size:9px;
-            letter-spacing:-2px;
             width:100%;
             height:70%;
             text-align:left;
         }
         @media (max-width: 280px) {
             font-size:7px;
-            letter-spacing:-2px;
         }
         
     }
