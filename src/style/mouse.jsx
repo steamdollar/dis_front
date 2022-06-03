@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { isMobile } from 'react-device-detect';
 import display from '../reducers/display';
+import { frontend } from '../utils/ip.js'
 const Fork = styled.img`
 
     position: absolute;
@@ -32,7 +33,7 @@ const forkComponent = () => {
     return(
         <>
             {isMobile==false &&
-            <Fork src="http://13.209.177.153:3000/img/fork.png" className="fork"/>
+            <Fork src='../img/fork.png' className="fork"/>
             }
         </>
         
