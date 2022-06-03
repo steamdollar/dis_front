@@ -5,7 +5,7 @@ import { backend } from '../utils/ip.js'
 import option from './option.js'
 
 async function stationAPI(action) {
-    const result = await axios.post(`${backend}:4000/station/info`, action);
+    const result = await axios.post(`${backend}/station/info`, action, option);
     return result;
 }
 
