@@ -9,7 +9,7 @@ import DefaultHeader from './components/DefaultLayout';
 import Footer from './components/Footer';
 import Void from './components/Void';
 
-import Fork from './style/mouse';
+import Fork from './style/mouse.jsx';
 
 import Index from './pages/Index.jsx';
 import Mypage from './pages/Mypage.jsx';

@@ -200,7 +200,7 @@ const ConfirmSet = (defaultValue) => {
         const result = await axios.post(`${backend}/register/request`, data)
 
         alert('등록 승인 되었습니다.')
-        window.location.href=`${frontend}/dt/admin/menu`
+        window.location.href=`http://donut999.shop/dt/admin/menu`
     }
 
 
