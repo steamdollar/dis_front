@@ -27,3 +27,5 @@ package-lock.json
 
 donut-front.pem
 *.pem
+
+note.md
