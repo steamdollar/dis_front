@@ -2,6 +2,7 @@ import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_delete_store_request, admin_delete_store_success, admin_delete_store_failure} from '../../reducers/admin/deleteStore';
 import { backend } from '../../utils/ip.js'
+import option from '../option.js'
 
 async function deleteStoreAPI({payload}){
     try{

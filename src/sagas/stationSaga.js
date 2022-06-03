@@ -2,9 +2,10 @@ import axios from "axios";
 import { takeLatest, call, put } from "redux-saga/effects";
 import { station_request, station_success, station_no, station_failure } from "../reducers/station";
 import { backend } from '../utils/ip.js'
+import option from './option.js'
 
 async function stationAPI(action) {
-    const result = await axios.post(`${backend}/station/info`, action);
+    const result = await axios.post(`${backend}:4000/station/info`, action);
     return result;
 }
 

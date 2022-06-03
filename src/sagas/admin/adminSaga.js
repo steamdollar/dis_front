@@ -2,6 +2,7 @@ import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_store_request, admin_store_success, admin_store_failure} from '../../reducers/admin/admin.js';
 import { backend } from '../../utils/ip.js'
+import option from '../option.js'
 
 async function adminAPI(){
     try{

@@ -2,6 +2,7 @@ import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import {admin_new_black_request,admin_new_black_success,admin_new_black_failure} from '../../reducers/admin/adminBlack';
 import { backend } from '../../utils/ip.js'
+import option from '../option.js'
 
 
 async function newBlackAPI({payload}){

@@ -2,6 +2,7 @@ import axios from 'axios';
 import {takeLatest,call,put} from 'redux-saga/effects';
 import { admin_review_request, admin_review_success, admin_review_failure} from '../../reducers/admin/adminReview.js';
 import { backend } from '../../utils/ip.js'
+import option from '../option.js'
 
 async function adminReviewAPI(){
     try{
