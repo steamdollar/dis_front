@@ -824,7 +824,7 @@ const Index = () => {
                                                     v.img1 !== 'N/A' ?
                                                     `${backend}/uploads/${v.img1}`
                                                     :
-                                                    v.img2 !== 'N/A ?
+                                                    v.img2 !== 'N/A' ?
                                                     `${backend}/uploads/${v.img2}`
                                                     :
                                                     v.img3 !== 'N/A' ?
