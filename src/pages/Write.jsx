@@ -321,6 +321,10 @@ const Write = () => {
 
     const submitHandler = (e) => {
         e.preventDefault()
+        if(email == null ) {
+            alert('로그인 후 리뷰를 작성해주세요!') 
+            return
+        }
         if(score.flavor == null && score.atmosphere == null && score.cheap == null && score.service == null
             && reviewText == null ) { 
             alert('점수, 평가 중 하나 이상은 작성해주세요!')       
