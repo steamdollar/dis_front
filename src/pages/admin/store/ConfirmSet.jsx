@@ -283,7 +283,7 @@ const ConfirmSet = (defaultValue) => {
                 
                 <BottomDiv>
                     <Submit type='submit' value='등록' />
-                    <Link to='/dt/admin/menu/store/confirm'><BackBtn type='button'>뒤로 가기</BackBtn></Link>
+                    <BackBtn type='button'><Link to='/dt/admin/menu/store/confirm'>뒤로 가기</Link></BackBtn>
                 </BottomDiv>
             </Form >
 
