@@ -222,7 +222,7 @@ const Join = () => {
                     <Input type='text' style={{ width: '100%' }} name='sns' />
                     <BottomDiv>
                         <Submit type='submit' value='신청' />
-                        <Back type="button"><Link to='/'>뒤로 가기</Link></Back>
+                        <Link to='/'><Back type="button">뒤로 가기</Back></Link>
                     </BottomDiv>
                     
                 </Form>
